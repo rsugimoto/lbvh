@@ -172,17 +172,17 @@ __device__ __host__ inline double minmaxdist(const aabb<double, 3> &lhs, const d
 template <typename T>
 __device__ __host__ inline typename vector_of<T, 2>::type centroid(const aabb<T, 2> &box) noexcept {
     typename vector_of<T, 2>::type c;
-    c.x = (box.upper.x + box.lower.x) * 0.5;
-    c.y = (box.upper.y + box.lower.y) * 0.5;
+    c.x = (box.upper.x + box.lower.x) * 0.5f;
+    c.y = (box.upper.y + box.lower.y) * 0.5f;
     return c;
 }
 
 template <typename T>
 __device__ __host__ inline typename vector_of<T, 3>::type centroid(const aabb<T, 3> &box) noexcept {
     typename vector_of<T, 3>::type c;
-    c.x = (box.upper.x + box.lower.x) * 0.5;
-    c.y = (box.upper.y + box.lower.y) * 0.5;
-    c.z = (box.upper.z + box.lower.z) * 0.5;
+    c.x = (box.upper.x + box.lower.x) * 0.5f;
+    c.y = (box.upper.y + box.lower.y) * 0.5f;
+    c.z = (box.upper.z + box.lower.z) * 0.5f;
     return c;
 }
 
