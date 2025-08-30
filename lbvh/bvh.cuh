@@ -419,6 +419,8 @@ class bvh {
                     const auto rbox = self.aabbs[ridx];
                     self.aabbs[parent] = merge(lbox, rbox);
 
+                    __threadfence();
+
                     // look the next parent...
                     parent = self.nodes[parent].parent_idx;
                 }
